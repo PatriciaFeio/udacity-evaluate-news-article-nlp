@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Evaluate a News Article Using NLP</title>
+    <link rel="stylesheet" href="/styles/resets.scss" />
+    <link rel="stylesheet" href="/styles/base.scss" />
+    <link rel="stylesheet" href="/styles/header.scss" />
+    <link rel="stylesheet" href="/styles/form.scss" />
+    <link rel="stylesheet" href="/styles/footer.scss" />
+  </head>
+
+  <body>
+    <header>
+      <div class="">Logo</div>
+    </header>
+
+    <main>
+      <section>
+        <h1>
+          Evaluate a News Article (text/url) Using NLP with the MeaningCloud API
+        </h1>
+        <form class="" onsubmit="return Client.handleSubmit(event)">
+          <input
+            id="name"
+            type="text"
+            name="input"
+            value=""
+            placeholder="Enter text here"
+          />
+          <input
+            type="submit"
+            name=""
+            value="submit"
+            onclick="return Client.handleSubmit(event)"
+            onsubmit="return Client.handleSubmit(event)"
+          />
+        </form>
+      </section>
+
+      <section>
+        <strong>Form Results:</strong>
+        <div id="results">
+          <div class="polarity">
+            <p class="label">Polarity:</p>
+            <div id="result_polarity"></div>
+          </div>
+        </div>
+        <div class="subjectivity">
+          <p class="label">Subjectivity:</p>
+          <div id="result_subjectivity"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>This is a footer</p>
+    </footer>
+  </body>
+</html>
