@@ -10,3 +10,19 @@ input {
     line-height: 16px;
     margin: 10px 0;
 }
+
+.submit-btn {
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: rgba(50,205,50, 0.6);
+}
+
+@media (max-width: 460px) {
+	form {
+        padding: 25px;
+    }
+}

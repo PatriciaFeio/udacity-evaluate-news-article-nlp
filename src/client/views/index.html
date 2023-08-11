@@ -5,32 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Evaluate a News Article Using NLP</title>
-    <link rel="stylesheet" href="/styles/resets.scss" />
-    <link rel="stylesheet" href="/styles/base.scss" />
-    <link rel="stylesheet" href="/styles/header.scss" />
-    <link rel="stylesheet" href="/styles/form.scss" />
-    <link rel="stylesheet" href="/styles/footer.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <header>
-      <div class="">Logo</div>
+      <img id="logo-img" class="header-logo" alt="NLP evaluate logo" />
+      <p class="header-title">NLP evaluation app</p>
     </header>
 
     <main>
       <section>
-        <h1>
-          Evaluate a News Article (text/url) Using NLP with the MeaningCloud API
-        </h1>
+        <h1>Evaluate a news article using NLP with the MeaningCloud API</h1>
         <form class="" onsubmit="return Client.handleSubmit(event)">
           <input
-            id="name"
+            id="url-input"
             type="text"
             name="input"
             value=""
-            placeholder="Enter text here"
+            placeholder="Enter url here"
           />
           <input
+            class="submit-btn"
             type="submit"
             name=""
             value="submit"
@@ -41,22 +42,51 @@
       </section>
 
       <section>
-        <strong>Form Results:</strong>
-        <div id="results">
-          <div class="polarity">
-            <p class="label">Polarity:</p>
-            <div id="result_polarity"></div>
-          </div>
+        <h2>Form results:</h2>
+        <div class="result">
+          <p class="label">Polarity:</p>
+          <div id="result_polarity" class="result-text"></div>
         </div>
-        <div class="subjectivity">
+        <div class="result">
           <p class="label">Subjectivity:</p>
-          <div id="result_subjectivity"></div>
+          <div id="result_subjectivity" class="result-text"></div>
+        </div>
+        <div class="result">
+          <p class="label">Agreement:</p>
+          <div id="result_agreement" class="result-text"></div>
+        </div>
+        <div class="result">
+          <p class="label">Confidence:</p>
+          <div id="result_confidence" class="result-text"></div>
+        </div>
+        <div class="result">
+          <p class="label">Irony:</p>
+          <div id="result_irony" class="result-text"></div>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>This is a footer</p>
+      <p class="copyright">
+        &copy; 2023 Patrícia Feio - Udacity Bertelsman Nanodegree
+      </p>
+      <p>
+        <a
+          class="attribution"
+          href="https://www.flaticon.com/free-icons/nlp"
+          title="nlp icons"
+          >Nlp icons created by Freepik - Flaticon</a
+        >
+      </p>
     </footer>
+    <script>
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
   </body>
 </html>
