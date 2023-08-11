@@ -2,7 +2,7 @@
 
 ## Simulation
 
-
+![project screen capture](https://github.com/PatriciaFeio/udacity-evaluate-news-article-nlp/blob/main/project-simulation.gif)
 
 <br>
 
